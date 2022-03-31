@@ -1,20 +1,11 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import Signup from "./screens/Signup";
+import { TailwindProvider } from "tailwind-rn";
+import utilities from "./tailwind.json";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World! This is cool! Also fast!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <TailwindProvider utilities={utilities}>
+      <Signup />
+    </TailwindProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
